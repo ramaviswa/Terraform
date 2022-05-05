@@ -1,0 +1,16 @@
+{
+    "resourcegroup": {
+        "name" : "testingterraform"
+    },
+    "location": "Central India",
+    "tags": {
+        "Project Name": "Viswa",
+        "Billingid": "R1903",
+        "Manager": "Ram"
+    },
+    "storageaccount":{
+        "name": "Testingstorgeaccount",
+        "account_tier": "Standard",
+        "account_replication_type":"GRS"
+    }
+}
