@@ -8,19 +8,30 @@ terraform {
 }
 
 provider "azurerm" {
+  features {
+    
+  }
 }
 
 module "resourcegroup" {
-    source = "../Modules/resourcegroup"
+    source = "./Modules/resourcegroup"
     location = var.location
     resourcegroup = var.resourcegroup
     tags = var.tags
 }
 
 module "storageaccount" {
-    source = "../Modules/storageaccount"
+    source = "./Modules/storageaccount"
     location = var.location
     tags = var.tags
     storageaccount = var.storageaccount
+    resourcegroup = module.resourcegroup.rgname
+}
+
+module "keyvault" {
+  source = "./Modules/KeyVault"
+    location = var.location
+    tags = var.tags
+   keyvalue = var.keyvalue
     resourcegroup = module.resourcegroup.rgname
 }

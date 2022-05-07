@@ -9,8 +9,11 @@
         "Manager": "Ram"
     },
     "storageaccount":{
-        "name": "Testingstorgeaccount",
+        "name": "testingsatechur",
         "account_tier": "Standard",
         "account_replication_type":"GRS"
+    },
+    "keyvalue":{
+        "name":"testingkvtechur"
     }
 }
